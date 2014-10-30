@@ -1,4 +1,4 @@
-package dicegame.player;
+package player;
 
 /**
  * Abstrakcyjna klasa bazowa dla klas graczy.

@@ -1,4 +1,4 @@
-package dicegame.player;
+package player;
 
 import java.util.Random;
 

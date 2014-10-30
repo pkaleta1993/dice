@@ -1,8 +1,8 @@
 package dicegame;
 
-import dicegame.player.Player;
-import dicegame.player.PlayerComp;
-import dicegame.player.PlayerHuman;
+import player.Player;
+import player.PlayerComp;
+import player.PlayerHuman;
 import java.util.Random;
 
 /**
@@ -37,7 +37,7 @@ public class DiceGame {
         
         // tutaj podobnie - próbujemy ustawić niepoprawne imię, ale robimy to
         // w bloku try-catch, dzięki czemu wszystko jest pod kontrolą
-        try {
+      /*  try {
             player.setName("");
             
             //poniższy komunikat wyświetli się tylko wtedy, gdy uda się ustawić imię
@@ -49,28 +49,10 @@ public class DiceGame {
             //(ustawiony w chwili tworzenia obiektu wyjątku)
             System.out.println("Błąd! " + e.getMessage());
         }
-        
-        Random dice = new Random();     //obiekt losujący (kostka)
-        int number,                     //wylosowana liczba
-            guess;                      //propozycja (strzał) gracza
-        
-        do {
-            number = dice.nextInt(6) + 1;
-            System.out.println("Wylosowane (number): " + number);
-
-            guess = player.guess();     //wywołujemy metodę guess() obiektu gracza (klasy PlayerComp lub PlayerHuman)
-
-            System.out.println("Gracz " + player.getName() + ": " + guess); //wyświetlamy informację zawierającą imię gracza i jego propozycję
-            
-            if (number == guess) {
-                System.out.println("BRAWO!");
-            } else {
-                System.out.println("PUDŁO!");
-            }
-            
-            System.out.println("---------------------------------------------");
-        
-        } while (number != guess);
+     */   
+       Game g = new Game();
+       g.AddPlayer(player);
+       g.start();
     }
     
 }
