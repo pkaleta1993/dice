@@ -1,14 +1,17 @@
 package dicegame;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
-import player.Player;
 import player.Player;
 
 public class Game {
+    //ArrayList
+   // private Player Player;
     
-    private Player Player;
-    
+   private List<Player> players = new ArrayList<Player>();
+   
     public void AddPlayer(Player player)
     {
         this.Player = player;
