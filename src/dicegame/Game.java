@@ -12,11 +12,24 @@ public class Game {
     
    private List<Player> players = new ArrayList<Player>();
    
-    public void AddPlayer(Player player)
+    public void AddPlayer(Player player )
     {
-        this.Player = player;
+        if(player!= null)
+        {
+      players.add(player);
+      
+      
+       for(Player p: players){
+        System.out.println(p);
+         }
+       
+      
+    } else {
+     throw new IllegalArgumentException("Gracz nie może być bez nazwy");    
+    }
     }
     
+        
    public void start()
    {
         Random dice = new Random();     //obiekt losujący (kostka)
