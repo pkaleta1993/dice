@@ -26,8 +26,8 @@ public class DiceGame {
            zmiennej obiekt klasy PlayerComp lub PlayerHuman. Obiekty obu klas
            mają metodę guess(), a to jest dla poniższego kodu najważniejsze.
         */
-        
-        Player player = new PlayerComp("Waldek");    //obiekt komputerowego gracza
+        Game g = new Game();
+        Player player = new PlayerComp("");    //obiekt komputerowego gracza
 //        Player player = new PlayerHuman("Marian");   //obiekt gracza-człowieka
         
         // próbujemy ustawić puste, czyli niepoprawne imię
@@ -37,7 +37,7 @@ public class DiceGame {
         
         // tutaj podobnie - próbujemy ustawić niepoprawne imię, ale robimy to
         // w bloku try-catch, dzięki czemu wszystko jest pod kontrolą
-      /*  try {
+       try {
             player.setName("");
             
             //poniższy komunikat wyświetli się tylko wtedy, gdy uda się ustawić imię
@@ -49,8 +49,8 @@ public class DiceGame {
             //(ustawiony w chwili tworzenia obiektu wyjątku)
             System.out.println("Błąd! " + e.getMessage());
         }
-     */   
-       Game g = new Game();
+      
+       
        g.AddPlayer(player);
        g.start();
     }
